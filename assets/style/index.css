@@ -1,0 +1,214 @@
+/* slideshow css */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+}
+
+.mySlides {
+  display: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.slideshow-title h1 {
+  position: absolute;
+  top: 28%;
+  left: 6.5vw; /* Adjusted to be relative to the viewport width */
+  color: white;
+  font-size: 3vw; /* Adjusted to scale with the viewport width */
+  z-index: 1;
+  line-height: 130%;
+  text-shadow: 3.5px 3.5px #045146;
+}
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .slideshow-container h1 {
+    left: 10vw;
+  }
+}
+
+/* sections */
+
+section h2, aside h2 {
+  background-color: #045146;
+  color: #fff;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.carousel {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto; 
+  padding: 10px;
+}
+
+.carousel-item {
+  flex: 0 0 auto; 
+  margin-right: 15px;
+}
+
+.game-carousel {
+  width: 135px;
+}
+
+.news-section {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.carousel-item img {
+  width: 100px;
+  height: auto;
+  display: block;
+}
+
+.game-carousel img {
+  width: 135px;
+  height: 200px;
+  display: block;
+}
+
+.game-title,
+.genre-title {
+  text-align: center;
+  margin-top: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.friends-section {
+  width: 300px;
+  flex-shrink: 0;
+  padding-right: 5px;
+  color: #045146;
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.friends-section p {
+  color: #045146;
+}
+
+.login-friends {
+  padding: 20px;
+  text-align: center;
+}
+
+.content-container {
+  display: flex;
+  max-height: 100vh; 
+  overflow: hidden; 
+  padding-left: 5px;
+}
+
+.left-sections {
+  flex-grow: 1;
+}
+
+.friends-section {
+  width: 300px;
+  margin-left: 20px;
+}
+
+.friends-section {
+  flex-shrink: 0;
+}
+
+.left-sections, .news-section {
+  flex-grow: 1;
+  overflow-y: auto; 
+}
+
+@media (max-width: 768px) {
+  .content-container {
+      flex-direction: column;
+  }
+
+  .friends-section {
+      width: 100%;
+      order: -1; /* Move friends section to the top on smaller screens */
+  }
+}
