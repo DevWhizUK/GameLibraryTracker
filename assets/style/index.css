@@ -111,7 +111,8 @@ img {
 
 /* sections */
 
-section h2, aside h2 {
+section h2,
+aside h2 {
   background-color: #045146;
   color: #fff;
   padding: 10px;
@@ -121,12 +122,12 @@ section h2, aside h2 {
 .carousel {
   display: flex;
   flex-wrap: nowrap;
-  overflow-x: auto; 
+  overflow-x: auto;
   padding: 10px;
 }
 
 .carousel-item {
-  flex: 0 0 auto; 
+  flex: 0 0 auto;
   margin-right: 15px;
 }
 
@@ -179,8 +180,8 @@ section h2, aside h2 {
 
 .content-container {
   display: flex;
-  max-height: 100vh; 
-  overflow: hidden; 
+  max-height: 100vh;
+  overflow: hidden;
   padding-left: 5px;
 }
 
@@ -197,18 +198,52 @@ section h2, aside h2 {
   flex-shrink: 0;
 }
 
-.left-sections, .news-section {
+.left-sections,
+.news-section {
   flex-grow: 1;
-  overflow-y: auto; 
+  overflow-y: auto;
 }
 
 @media (max-width: 768px) {
   .content-container {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .friends-section {
-      width: 100%;
-      order: -1; /* Move friends section to the top on smaller screens */
+    width: 100%;
+    display: none;
+    order: -1; /* Move friends section to the top on smaller screens */
   }
+}
+
+.news-section {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.news-item {
+  flex: 0 0 auto; /* Prevent stretching */
+  width: 300px; /* Adjust width as needed */
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit text color */
+}
+
+.news-item img {
+  width: 100%; /* Make image fill the container */
+  height: 170px;
+  display: block;
+}
+
+.news-content {
+  padding: 10px;
+}
+
+.news-title {
+  font-size: 1.2em;
+  margin-top: 0.5em;
+}
+
+.news-description {
+  font-size: 1em;
+  margin-top: 0.5em;
 }

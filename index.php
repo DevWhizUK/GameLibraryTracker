@@ -28,7 +28,7 @@
         <a class="prev" onclick="plusSlides(-1)">❮</a>
         <a class="next" onclick="plusSlides(1)">❯</a>
     </div>
-    
+
     <div class="content-container">
         <div class="left-sections">
 
@@ -60,6 +60,7 @@
     <section class="news-section">
         <h2>RECENT NEWS</h2>
         <div class="carousel">
+            <?php include 'assets/classes/index-page/fetch-articles.php'; ?>
         </div>
     </section>
 
