@@ -64,6 +64,8 @@
         </div>
     </section>
 
+    <?php include 'assets\inc\footer.html'; ?>
+
     <script src="assets/js/script.js"></script>
     <script src="assets/js/banner.js"></script>
 </body>
